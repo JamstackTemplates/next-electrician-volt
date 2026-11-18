@@ -1,0 +1,22 @@
+{
+  "templateId": "next-electrician-volt",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fullPage": false,
+  "captures": [
+    {
+      "mode": "light",
+      "sha256": "4a1f6dd08f9cc48ad6a3ad647f9cd6a995fc8f73625ea9a4e650c737ee4d6af5",
+      "file": "jamstacks/home-light.jpg",
+      "bytes": 201527
+    },
+    {
+      "mode": "dark",
+      "sha256": "bf149ffe34c28e1387f51b636097f4bc81ecca73c10c7ffe24d1607dc1e7df99",
+      "file": "jamstacks/home-dark.jpg",
+      "bytes": 192539
+    }
+  ]
+}

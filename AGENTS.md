@@ -72,3 +72,24 @@ and Pages never import/read it. Keep site.config.json, the form and workflow out
 light/dark captures after a fresh normal build and run node --test jamstacks/config.test.mjs separately.
 Each new template needs its own business-led layout/fonts/art and OG image; do not ship the neutral
 starter as a final design. Remove `plan/` and `.claude/skills/` before publishing a gallery template once reviewed.
+
+## File ownership (Bright Spark Electrical / Volt)
+
+| File | Owns |
+| --- | --- |
+| `content/business.ts` | Business name, tagline, introduction, email, phone, base landmark note, suburbs, call-out/hourly rates, phone hours, emergency copy and enquiry message tips |
+| `content/services.ts` | Services across `residential`, `commercial` and `solar`, AUD prices, `breakerLabel`, `amps`, `featured` (exactly 6), `available` and `availabilityNote` |
+| `content/licences.ts` | Contractor registration, A-grade licence, solar accreditation and public liability insurance rating plates (`(sample)` numbers for the demo) |
+| `content/jobs.ts` | Recent job dockets referencing valid `serviceId`s and `suburb`s with unique docket numbers |
+| `content/safety.ts` | 12 look-only home safety checks, `SAFETY_AREAS`, `why` explanations and `stopAndCall` flags |
+| `app/page.tsx` | Home page section order and editable copy (`Hero`, `SectorStrip`, `BoardShowcase`, `LicencePlates`, `JobSheets`, `SafetyTeaser`, `ServiceArea`, `Rates`, `CallToAction`) + `Electrician` JSON-LD |
+| `app/services/page.tsx` | Services page copy, `CircuitSchedule` groups, `WaitlistNote`, `JobSteps`, `Rates` and `CallToAction` |
+| `app/safety/page.tsx` | Home safety check copy, `Safety.StopPanel`, `Safety.Rule`, `SafetyChecklist`, `Safety.Inspection`, full `LicencePlates` and `CallToAction` |
+| `app/contact/page.tsx` | Request-a-quote page copy, `Contact.Docket` (hosted Jamstacks form or email fallback), `Contact.Include` tips and `Contact.Rail` |
+| `app/not-found.tsx` | Static 404 "Circuit open" page |
+| `app/tailwind.input.css` | Day shift (light) and Night shift (dark) palette tokens, `@theme inline` mappings, concrete/graphite textures, Dymo/plate/docket/LCD styles, reduced-motion and print stylesheet |
+| `components/art/` | Inline SVG illustrations and icons (`live-board.tsx`, `breaker.tsx`, `motifs.tsx`, `icons.tsx`) |
+| `lib/routes.ts` | Public route list for `app/sitemap.ts` |
+| `lib/structured-data.ts` | `Electrician` JSON-LD builder and `jsonLd()` `<`-escaping helper |
+| `lib/format.ts`, `lib/hours.ts` | AUD formatting, 12-hour clock formatting and `Australia/Melbourne` phone-hours status |
+| `site.config.json` | Public site name, meta description, hostname, `Australia/Melbourne` time zone and Jamstacks `siteId`/`cdnUrl` |
